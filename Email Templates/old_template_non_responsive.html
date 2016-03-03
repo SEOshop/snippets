@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>{{ email.subject }}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style type="text/css">
+		body {
+			font-family:Helvetica;
+			font-size:11px;
+		}
+		.toplinks {
+			font-size:12px;
+			color:#000000;
+			line-height:30px;
+		}
+		.toplinks a {
+			text-decoration:none;
+			color:#000000;
+		}
+		.toplinks a:hover {
+			text-decoration:underline;
+		}
+		.details {
+			font-size:16px;
+			color:#{{ theme.color_4 }};
+			line-height:20px;
+		}
+		.details a {
+			text-decoration:none;
+			color:#333333;
+		}
+		.details a:hover {
+			text-decoration:underline;
+		}
+		.subject {
+			line-height:20px;
+			color:#{{ shop.color_1 }};
+			font-size:16px;
+		}
+		.message {
+			line-height:18px;
+			font-size:14px;
+			color:#{{ theme.color_4 }};
+		}
+		.message a {
+			text-decoration:underline;
+			color:#{{ theme.color_2 }};
+		}
+		.footer {
+			line-height:18px;
+			color:#999999;
+			font-size:12px;
+		}
+		.footer a {
+			text-decoration:none;
+			color:#999999;
+		}
+		.footer a:hover {
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body bgcolor="#eeeeee">
+<div style="background-color:#eeeeee; padding:10px 20px 40px 20px;">
+	<table width="600" cellpadding="0" cellspacing="0" align="center" bgcolor="#eeeeee" style="font-size:12px;">
+		<tr>
+			<td width="600" height="30" colspan="2" align="right" class="toplinks"><a href="{{ shop.url }}" style="color:#000000;">{{ 'Website' | t }}</a> &nbsp; | &nbsp; <a href="{{ shop.url }}account/" style="color:#000000;">{{ 'My account' | t }}</a> &nbsp; | &nbsp; <a href="{{ shop.url }}service/" style="color:#000000;">{{ 'Contact' | t }}</a>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="600" height="5" colspan="2"><img style="display:block;" src="{{ general.assetsurl }}email/bg_top.png" width="600" height="5" alt=""></td>
+		</tr>
+		<tr>
+			<td width="600" bgcolor="#FFFFFF" colspan="2" align="center">
+				<table width="560" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+					<tr>
+						<td width="280" height="100" bgcolor="#FFFFFF" align="left"><img src="{{ shop.logo }}" width="220" height="100" alt=""></td>
+						<td width="280" height="100" bgcolor="#FFFFFF" align="right" valign="middle" class="details"><b style="color:#{{ theme.color_2 }};">{{ shop.name }}</b><br><a href="mailto:{{ shop.email }}">{{ shop.email }}</a><br><a href="{{ shop.url }}">{{ shop.domain }}</a></td>
+					</tr>
+					<tr>
+						<td width="560" height="20" colspan="2" valign="middle"><img src="{{ general.assetsurl }}email/spacer.gif" width="560" height="1" alt="" style="background-color:#EEEEEE;"></td>
+					</tr>
+					<tr>
+						<td width="560" height="20" colspan="2" class="subject"><b>{{ email.subject }}</b></td>
+					</tr>
+					<tr>
+						<td width="560" height="20" colspan="2" valign="middle"><img src="{{ general.assetsurl }}email/spacer.gif" width="560" height="1" alt="" style="background-color:#EEEEEE;"></td>
+					</tr>
+					<tr>
+						<td width="560" colspan="2" class="message">{{ email.content | raw }}</td>
+					</tr>
+					<tr>
+						<td width="560" height="10" colspan="2"><img src="{{ general.assetsurl }}email/spacer.gif" width="1" height="1" alt=""></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td width="600" height="5" colspan="2"><img style="display:block;" src="{{ general.assetsurl }}email/bg_bottom.png" width="600" height="5" alt=""></td>
+		</tr>
+		<tr>
+			<td width="600" height="10" colspan="2"><img src="{{ general.assetsurl }}email/spacer.gif" width="1" height="1" alt=""></td>
+		</tr>
+		<tr>
+			<td width="600" colspan="2" align="center" class="footer"><a href="{{ shop.url }}service/about/" style="color:#999999;">{{ 'About' | t }} {{ shop.name }}</a> - <a href="{{ shop.url }}service/general-terms-conditions/" style="color:#999999;">{{ 'General terms & conditions' | t }}</a> - <a href="{{ shop.url }}service/disclaimer/" style="color:#999999;">{{ 'Disclaimer' | t }}</a> - <a href="{{ shop.url }}service/privacy-policy/" style="color:#999999;">{{ 'Privacy policy' | t }}</a> - <a href="{{ shop.url }}service/shipping-returns/" style="color:#999999;">{{ 'Shipping & returns' | t }}</a><br>&copy; Copyright {{ 'now' | date('Y') }} <a href="{{ shop.url }}" style="color:#999999;">{{ shop.name }}</a><br>{{ 'This is an automatically generated message.' | t }}</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
