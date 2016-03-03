@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>{{ email.subject }}</title>
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+    body{
+      -webkit-text-size-adjust: none;
+    }
+    td {
+      border-collapse:collapse;
+    }
+
+    body {
+      font-family: 'Source Sans Pro', 'Open Sans', Arial, Verdana, 'Sans Serif';
+      color:#ABB3B3;
+      font-size:13px;
+      margin: 0px;
+      padding: 0px;
+      background-color:#F9F9F9;
+    }
+    .details {
+      font-size:16px;
+      color:#{{ theme.color_4 }};
+      line-height:20px;
+      text-align:right;
+    }
+    .details a {
+      text-decoration:none;
+      color:#333333;
+    }
+    .details a:hover {
+      text-decoration:underline;
+    }
+    .subject {
+      line-height:20px;
+      color:#{{ theme.color_1 }};
+      font-size:16px;
+    }
+    .message {
+      line-height:18px;
+      font-size:14px;
+      color:#{{ theme.color_4 }};
+    }
+    .message a {
+      text-decoration:underline;
+      color:#{{ theme.color_2 }};
+    }
+    .header_column{
+      float:left;
+      width:50%;
+    }
+    .footer{
+      color:#ABB3B3;
+      font-size:12px;
+      font-family:'Source Sans Pro', 'Open Sans', Arial, Verdana, 'Sans Serif';
+      text-align:center;
+    }
+    @media only screen and (max-width: 590px){
+      .header_column{
+        display:block;
+        margin:0px auto;
+        width:100%;
+        text-align:center;
+      }
+      .details{
+        padding-top:24px;
+        text-align:center;
+      }
+    }
+  </style>
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet" type="text/css" />
+<table border="0" cellpadding="12" align="center" cellspacing="0" style="padding:0;width:100% !important;background:#F9F9F9;background-color:#F9F9F9;">
+  <tbody>
+  <tr>
+    <td valign="top"><!--block-->
+      <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-radius:2px;border:1px #DEE1E2 solid;background:#FFFFFF;background-color:#FFFFFF;max-width:600px;" width="100%">
+        <tbody>
+        <tr style="line-height:0px;">
+          <td>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody>
+              <tr>
+                <td colspan="4" height="24"> </td>
+              </tr>
+              <tr>
+                <td align="left" width="24"> </td>
+                <td>
+
+                  <!-- shop logo -->
+                  <table class="header_column">
+                    <tr>
+                      <td>
+                        <img src="{{ shop.logo }}" width="220" height="100">
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- company details -->
+                  <table class="header_column">
+                    <tr>
+                      <td width="200" class="details">
+                        <b style="color:#{{ theme.color_2 }};">{{ shop.name }}</b><br>
+                        <a href="mailto:{{ shop.email }}">{{ shop.email }}</a><br>
+                        <a href="{{ shop.url }}">{{ shop.domain }}</a><br>
+                        <a href="{{ shop.url }}account/" style="color:#000000;">{{ 'My account' | t }}</a> | <a href="{{ shop.url }}service/" style="color:#000000;">{{ 'Contact' | t }}</a><br>
+                      </td>
+                    </tr>
+                  </table>
+
+                </td>
+                <td align="right" width="24"> </td>
+              </tr>
+              <tr>
+                <td colspan="4" height="24"> </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <!--blue border-->
+        <tr>
+          <td colspan="3" height="1px" style="height:1px;background-color: #E1E4E5;"></td>
+        </tr>
+
+        <tr>
+          <td colspan="3" height="24"></td>
+        </tr>
+
+        <!--intro-->
+        <tr style="line-height:0px;">
+          <td>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody>
+              <tr>
+                <td height="24"></td>
+                <td class="subject"><b>{{ email.subject }}</b></td>
+                <td height="24"></td>
+              </tr>
+              <tr>
+                <td align="left" width="24"></td>
+                <td align="left" class="message" valign="top">
+                  {{ email.content | raw }}
+                </td>
+                <td align="right" width="24"> </td>
+              </tr>
+              <tr>
+                <td height="24"></td>
+                <td height="24"></td>
+                <td height="24"></td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <!--action-->
+
+        <!--thank you-->
+        <tr style="line-height:0px;">
+          <td>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <!--footer-->
+
+      <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:600px;" width="100%">
+        <tbody>
+        <tr>
+          <td height="12"> </td>
+        </tr>
+        <!--company info-->
+        <tr>
+          <td style="padding:0;border-collapse:collapse;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody>
+              <tr>
+                <td class="footer">
+                  <a href="{{ shop.url }}service/about/" style="color:#999999;">{{ 'About' | t }} {{ shop.name }}</a> |
+                  <a href="{{ shop.url }}service/general-terms-conditions/" style="color:#999999;">{{ 'General terms & conditions' | t }}</a> |
+                  <a href="{{ shop.url }}service/disclaimer/" style="color:#999999;">{{ 'Disclaimer' | t }}</a> |
+                  <a href="{{ shop.url }}service/privacy-policy/" style="color:#999999;">{{ 'Privacy policy' | t }}</a> |
+                  <a href="{{ shop.url }}service/shipping-returns/" style="color:#999999;">{{ 'Shipping & returns' | t }}</a>
+                  <br>
+                  Copyright {{ 'now' | date('Y') }} | <a href="{{ shop.url }}" style="color:#999999;">{{ shop.name }}</a>
+                  <br><br>
+                  {{ shop.name }} |
+                  {{ shop.street }} |
+                  {{ shop.postcode }} {{ shop.city }} |
+                  {{ shop.region }}, {{ shop.country }}
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
