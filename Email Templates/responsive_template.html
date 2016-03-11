@@ -79,30 +79,25 @@
     <td valign="top"><!--block-->
       <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-radius:2px;border:1px #DEE1E2 solid;background:#FFFFFF;background-color:#FFFFFF;max-width:600px;" width="100%">
         <tbody>
-        <tr style="line-height:0px;">
+        <tr>
           <td>
             <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
               <tbody>
               <tr>
-                <td colspan="4" height="24"> </td>
+                <td colspan="4" height="24">&nbsp;</td>
               </tr>
               <tr>
-                <td align="left" width="24"> </td>
+                <td align="left" width="24">&nbsp;</td>
                 <td>
 
                   <!-- shop logo -->
-                  <table class="header_column">
+                  <table class="header_column" width="100%" style="width: 100%">
                     <tr>
-                      <td>
+                      <td width="220">
                         <img src="{{ shop.logo }}" width="220" height="100">
                       </td>
-                    </tr>
-                  </table>
-
-                  <!-- company details -->
-                  <table class="header_column">
-                    <tr>
-                      <td width="200" class="details">
+                      <!-- company details -->
+                      <td class="details" style="text-align: right" align="right">
                         <b style="color:#{{ theme.color_2 }};">{{ shop.name }}</b><br>
                         <a href="mailto:{{ shop.email }}">{{ shop.email }}</a><br>
                         <a href="{{ shop.url }}">{{ shop.domain }}</a><br>
@@ -110,12 +105,11 @@
                       </td>
                     </tr>
                   </table>
-
                 </td>
-                <td align="right" width="24"> </td>
+                <td align="right" width="24">&nbsp;</td>
               </tr>
               <tr>
-                <td colspan="4" height="24"> </td>
+                <td colspan="4" height="24">&nbsp;</td>
               </tr>
               </tbody>
             </table>
@@ -128,30 +122,30 @@
         </tr>
 
         <tr>
-          <td colspan="3" height="24"></td>
+          <td colspan="3" height="24">&nbsp;</td>
         </tr>
 
         <!--intro-->
-        <tr style="line-height:0px;">
+        <tr>
           <td>
             <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
               <tbody>
               <tr>
-                <td height="24"></td>
-                <td class="subject"><b>{{ email.subject }}</b></td>
-                <td height="24"></td>
+                <td height="24">&nbsp;</td>
+                <td><b class="subject" style="color:#{{ theme.color_1 }};">{{ email.subject }}</b></td>
+                <td height="24">&nbsp;</td>
               </tr>
               <tr>
                 <td align="left" width="24"></td>
-                <td align="left" class="message" valign="top">
+                <td align="left" class="message" valign="top" style="color:#{{ theme.color_4 }};">
                   {{ email.content | raw }}
                 </td>
-                <td align="right" width="24"> </td>
+                <td align="right" width="24">&nbsp;</td>
               </tr>
               <tr>
-                <td height="24"></td>
-                <td height="24"></td>
-                <td height="24"></td>
+                <td height="24">&nbsp;</td>
+                <td height="24">&nbsp;</td>
+                <td height="24">&nbsp;</td>
               </tr>
               </tbody>
             </table>
@@ -174,7 +168,7 @@
       <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:600px;" width="100%">
         <tbody>
         <tr>
-          <td height="12"> </td>
+          <td height="12">&nbsp;</td>
         </tr>
         <!--company info-->
         <tr>
@@ -182,7 +176,7 @@
             <table border="0" cellpadding="0" cellspacing="0" width="100%">
               <tbody>
               <tr>
-                <td class="footer">
+                <td class="footer" align="center">
                   <a href="{{ shop.url }}service/about/" style="color:#999999;">{{ 'About' | t }} {{ shop.name }}</a> |
                   <a href="{{ shop.url }}service/general-terms-conditions/" style="color:#999999;">{{ 'General terms & conditions' | t }}</a> |
                   <a href="{{ shop.url }}service/disclaimer/" style="color:#999999;">{{ 'Disclaimer' | t }}</a> |
@@ -194,7 +188,7 @@
                   {{ shop.name }} |
                   {{ shop.street }} |
                   {{ shop.postcode }} {{ shop.city }} |
-                  {{ shop.region }}, {{ shop.country }}
+                  {{ shop.region.name }}, {{ shop.country }}
                 </td>
               </tr>
               </tbody>
