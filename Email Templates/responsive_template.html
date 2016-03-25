@@ -58,15 +58,15 @@
       text-align:center;
     }
     @media only screen and (max-width: 590px){
-      .header_column{
-        display:block;
-        margin:0px auto;
-        width:100%;
-        text-align:center;
+      .col {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        padding-bottom: 1em !important;
       }
-      .details{
-        padding-top:24px;
-        text-align:center;
+
+      .col .company-info {
+        text-align: center !important;
       }
     }
   </style>
@@ -89,22 +89,40 @@
               <tr>
                 <td align="left" width="24">&nbsp;</td>
                 <td>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" id="container">
+                  <tr>
+                    <td>
 
-                  <!-- shop logo -->
-                  <table class="header_column" width="100%" style="width: 100%">
-                    <tr>
-                      <td width="220">
-                        <img src="{{ shop.logo }}" width="220" height="100">
-                      </td>
-                      <!-- company details -->
-                      <td class="details" style="text-align: right" align="right">
-                        <b style="color:#{{ theme.color_2 }};">{{ shop.name }}</b><br>
-                        <a href="mailto:{{ shop.email }}">{{ shop.email }}</a><br>
-                        <a href="{{ shop.url }}">{{ shop.domain }}</a><br>
-                        <a href="{{ shop.url }}account/" style="color:#000000;">{{ 'My account' | t }}</a> | <a href="{{ shop.url }}service/" style="color:#000000;">{{ 'Contact' | t }}</a><br>
-                      </td>
-                    </tr>
-                  </table>
+                      <!--[if mso]><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" width="300"><![endif]-->
+
+                      <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" class="col" style="width:100%; max-width: 50%;">
+                        <tr>
+                          <td class="col-first-td">
+                            <img src="{{ shop.logo }}" width="220">
+                          </td>
+                        </tr>
+                      </table>
+
+                      <!--[if mso]></td><td valign="top" width="300"><![endif]-->
+
+                      <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" class="col" style="width:100%; max-width: 50%;">
+                        <tr>
+                          <td class="col-last-td">
+                            <div class="company-info" style="text-align: right;">
+                              <b style="color:#{{ theme.color_2 }};">{{ shop.name }}</b><br>
+                              <a href="mailto:{{ shop.email }}">{{ shop.email }}</a><br>
+                              <a href="{{ shop.url }}">{{ shop.domain }}</a><br>
+                              <a href="{{ shop.url }}account/" style="color:#000000;">{{ 'My account' | t }}</a> | <a href="{{ shop.url }}service/" style="color:#000000;">{{ 'Contact' | t }}</a><br>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+
+                      <!--[if mso]></td></tr></table><![endif]-->
+
+                    </td>
+                  </tr>
+                </table><!--/#container-->
                 </td>
                 <td align="right" width="24">&nbsp;</td>
               </tr>
