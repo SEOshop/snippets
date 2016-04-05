@@ -59,78 +59,50 @@
     }
     @media only screen and (max-width: 590px){
       .col {
-        width: 100% !important;
-        max-width: 100% !important;
         text-align: center !important;
         padding-bottom: 1em !important;
-      }
-
-      .col .company-info {
-        text-align: center !important;
       }
     }
   </style>
 </head>
-<body>
+<body style="background: #f9f9f9;">
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet" type="text/css" />
-<table border="0" cellpadding="12" align="center" cellspacing="0" style="padding:0;width:100% !important;background:#F9F9F9;background-color:#F9F9F9;">
-  <tbody>
+<table border="0" cellpadding="0" align="center" cellspacing="0" width="100%" style="padding: 2em 0 0; max-width: 600px;">
   <tr>
     <td valign="top"><!--block-->
-      <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-radius:2px;border:1px #DEE1E2 solid;background:#FFFFFF;background-color:#FFFFFF;max-width:600px;" width="100%">
-        <tbody>
+      <table align="center" border="0" cellpadding="0" cellspacing="0" style="border:1px #DEE1E2 solid; background:#FFFFFF; max-width:600px;" width="100%">
         <tr>
-          <td>
-            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-              <tbody>
+          <td style="text-align: center; vertical-align: top; font-size: 0;">
+          <!--[if mso]><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" width="300"><![endif]-->
+
+          <div class="col-wrapper" style="width: 263px; display: inline-block; vertical-align: middle; font-size: 12px; padding: 24px 12px 24px 24px;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="col" style="text-align: left;">
               <tr>
-                <td colspan="4" height="24">&nbsp;</td>
-              </tr>
-              <tr>
-                <td align="left" width="24">&nbsp;</td>
-                <td>
-                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" id="container">
-                  <tr>
-                    <td>
-
-                      <!--[if mso]><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" width="300"><![endif]-->
-
-                      <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" class="col" style="width:100%; max-width: 50%;">
-                        <tr>
-                          <td class="col-first-td">
-                            <img src="{{ shop.logo }}" width="220">
-                          </td>
-                        </tr>
-                      </table>
-
-                      <!--[if mso]></td><td valign="top" width="300"><![endif]-->
-
-                      <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" class="col" style="width:100%; max-width: 50%;">
-                        <tr>
-                          <td class="col-last-td">
-                            <div class="company-info" style="text-align: right;">
-                              <b style="color:#{{ theme.color_2 }};">{{ shop.name }}</b><br>
-                              <a href="mailto:{{ shop.email }}">{{ shop.email }}</a><br>
-                              <a href="{{ shop.url }}">{{ shop.domain }}</a><br>
-                              <a href="{{ shop.url }}account/" style="color:#000000;">{{ 'My account' | t }}</a> | <a href="{{ shop.url }}service/" style="color:#000000;">{{ 'Contact' | t }}</a><br>
-                            </div>
-                          </td>
-                        </tr>
-                      </table>
-
-                      <!--[if mso]></td></tr></table><![endif]-->
-
-                    </td>
-                  </tr>
-                </table><!--/#container-->
+                <td class="col-first-td">
+                  <img src="{{ shop.logo }}" width="100%" style="max-width: 100%;">
                 </td>
-                <td align="right" width="24">&nbsp;</td>
               </tr>
-              <tr>
-                <td colspan="4" height="24">&nbsp;</td>
-              </tr>
-              </tbody>
             </table>
+          </div>
+
+          <!--[if mso]></td><td valign="top" width="300"><![endif]-->
+
+          <div class="col-wrapper" style="width: 263px; display: inline-block; vertical-align: top; font-size: 12px; padding: 24px 24px 24px 12px;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="col" style="text-align: left;">
+              <tr>
+                <td class="col-last-td">
+                  <div class="company-info">
+                    <b style="color:#{{ theme.color_2 }};">{{ shop.name }}</b><br>
+                    <a href="mailto:{{ shop.email }}">{{ shop.email }}</a><br>
+                    <a href="{{ shop.url }}">{{ shop.domain }}</a><br>
+                    <a href="{{ shop.url }}account/" style="color:#000000;">{{ 'My account' | t }}</a> | <a href="{{ shop.url }}service/" style="color:#000000;">{{ 'Contact' | t }}</a><br>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <!--[if mso]></td></tr></table><![endif]-->
           </td>
         </tr>
 
@@ -147,7 +119,6 @@
         <tr>
           <td>
             <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-              <tbody>
               <tr>
                 <td height="24">&nbsp;</td>
                 <td><b class="subject" style="color:#{{ theme.color_1 }};">{{ email.subject }}</b></td>
@@ -165,7 +136,6 @@
                 <td height="24">&nbsp;</td>
                 <td height="24">&nbsp;</td>
               </tr>
-              </tbody>
             </table>
           </td>
         </tr>
@@ -179,12 +149,10 @@
             </table>
           </td>
         </tr>
-        </tbody>
       </table>
       <!--footer-->
 
       <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:600px;" width="100%">
-        <tbody>
         <tr>
           <td height="12">&nbsp;</td>
         </tr>
@@ -192,7 +160,6 @@
         <tr>
           <td style="padding:0;border-collapse:collapse;">
             <table border="0" cellpadding="0" cellspacing="0" width="100%">
-              <tbody>
               <tr>
                 <td class="footer" align="center">
                   <a href="{{ shop.url }}service/about/" style="color:#999999;">{{ 'About' | t }} {{ shop.name }}</a> |
@@ -209,15 +176,12 @@
                   {{ shop.region.name }}, {{ shop.country }}
                 </td>
               </tr>
-              </tbody>
             </table>
           </td>
         </tr>
-        </tbody>
       </table>
     </td>
   </tr>
-  </tbody>
 </table>
 </body>
 </html>
